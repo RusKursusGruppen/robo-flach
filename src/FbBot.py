@@ -2,10 +2,15 @@ from fbchat import Client
 from fbchat.models import *
 from tqdm import tqdm
 from datetime import date as dt
+import configparser
+
 class FbBot():
-  def __init__(self, email, password):
-    self.client = Client(email, password)
-    self.thread_id = '1920112608081580'
+  def __init__(self):
+    config = configparser.ConfigParser()
+    config.read('src/config.ini')
+    config = config['FACEBOOK']
+    self.client = Client(config['email'], config['password'])
+    self.thread_id = config['thread_id']
     self.group = self.client.fetchThreadInfo(self.thread_id)[self.thread_id]
     self.names = self.getListOfNames()
 
