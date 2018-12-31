@@ -1,8 +1,7 @@
 from fbchat import Client
 from fbchat.models import *
 from tqdm import tqdm
-import datetime
-
+from datetime import date as dt
 class FbBot():
   def __init__(self, email, password):
     self.client = Client(email, password)
@@ -17,7 +16,8 @@ class FbBot():
     return [self._formatName(str(user)) for user in self.users]
 
   def _formatName(self, user):
-    return tuple(user.split('USER ')[1].split(')')[0].split('('))
+    name, uid = tuple(user.split('USER ')[1].split(')')[0].split('('))
+    return (name[:-1], uid)
 
 
   def getLunches(self):
@@ -34,7 +34,7 @@ class FbBot():
            frokost_besked in message.text)):
         date = int(message.timestamp) // 1000 # Fucking miliseconds
         ppl.append({
-          'date': datetime.fromtimestamp(date),
+          'date': dt.fromtimestamp(date),
           'msgid': message.uid,
           'reactions': [self._idToName(user) for user, react in
             message.reactions.items() if react == MessageReaction.YES]
