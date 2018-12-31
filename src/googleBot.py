@@ -20,7 +20,7 @@ class Gbot():
         self.sheet.update_cell(1, i,  names[i - 2] )
         self.columns.append((names[i - 2], i))
 
-  def lunches_to_table(lunches, names):
+  def lunches_to_table(self, lunches, names):
     weeks = []
     dates = []
     for lunch in lunches:
