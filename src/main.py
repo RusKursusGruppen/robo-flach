@@ -1,12 +1,22 @@
-from src.FbBot import FbBot
-from src.googleBot import Gbot
+from FbBot import FbBot
+from googleBot import Gbot
 from datetime import date
 from tqdm import tqdm
 import time
 
 gbot = Gbot()
-fbot = FbBot('<email>', '<password>')
+fbot = FbBot('robo-flach@rotendahl.dk', 'frokost')
 
+lunches = gbot.lunches_to_table(
+  fbot.getLunches(),
+  [name for name, uid in fbot.names]
+)
+cell_list = gbot.sheet.range('A1:B5')
+cell_list[0].value = "lol"
+print(cell_list[0])
+for cell in cell_list:
+  cell.value = "jon er dum"
+gbot.sheet.update_cells(cell_list)
 def fillNamesAndDates(lunch, row_nr):
   gbot.sheet.update_cell(row_nr, 1, lunch['date'])
   for name in lunch['reactions']:
