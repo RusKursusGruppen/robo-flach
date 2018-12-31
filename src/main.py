@@ -5,7 +5,7 @@ from tqdm import tqdm
 import time
 
 gbot = Gbot()
-fbot = FbBot('robo-flach@rotendahl.dk', 'frokost')
+fbot = FbBot()
 
 lunches = gbot.lunches_to_table(
   fbot.getLunches(),
@@ -17,7 +17,7 @@ cell_list = gbot.sheet.range(1, 1, end_row, end_col)
 cnt = 0
 for i in range(end_row):
   for j in range(end_col):
-    cell_list[cnt].value = lunches[j][i]
+    cell_list[cnt].value = lunches.iloc[i,j]
     cnt += 1
 gbot.sheet.update_cells(cell_list)
 
