@@ -5,8 +5,7 @@ from tqdm import tqdm
 import time
 
 gbot = Gbot()
-fbot = FbBot('email', 'pass')
-
+fbot = FbBot()
 
 
 lunches = gbot.lunches_to_table(
@@ -15,4 +14,4 @@ lunches = gbot.lunches_to_table(
 )
 
 
-lunches.columns
+lunches

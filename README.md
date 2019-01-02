@@ -14,7 +14,15 @@ $ source virtualenv/bin/activate
 $ pip install -r requirements.txt
 $ pip install git+https://github.com/carpedm20/fbchat.git@refs/pull/371/head
 ```
-For at få login oplysninger skal du skrive til Flach eller Benja.
+Du skal også lave en med stien `src/config.ini` som skal indeholde følgende oplysninger
+```ini
+[FACEBOOK]
+email = <email>
+password = <password>
+thread_id = <Tråd id>
+```
+
+
 
 ## TODO
 * [ ] Update google sheet in batches
