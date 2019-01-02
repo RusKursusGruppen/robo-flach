@@ -7,7 +7,7 @@ import configparser
 class FbBot():
   def __init__(self):
     config = configparser.ConfigParser()
-    config.read('src/config.ini')
+    config.read('config.ini')
     config = config['FACEBOOK']
     self.client = Client(config['email'], config['password'])
     self.thread_id = config['thread_id']
