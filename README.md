@@ -21,11 +21,11 @@ email = <email>
 password = <password>
 thread_id = <Thread_id>
 ```
-The other credential file is for the google sheet, follow the [setup guide][gg]
-to obtain the file.
+The other credential file is for the google sheet, follow the 
+[setup guide][google guide] to obtain the file.
 
 ## Dependencies
-The two main dependencies are [FBchat](fbChat) which is the library used for
+The two main dependencies are [FBchat][fbChat] which is the library used for
 interaction with messenger, and [Gspread](https://gspread.readthedocs.io) that
 interacts with Google Sheets.
 
@@ -34,7 +34,7 @@ interacts with Google Sheets.
 The code is split into two parts, one part the does the balance sheet and keeps
 tracks of lunches. The other part is a chatbot that does fun/annoying things.
 
-* [src/FbBot.py](FbBot) and [googleBot.py][googleBot]
+* [src/FbBot.py][FbBot] and [googleBot.py][googleBot]
     These files wrap around the apis for messenger and sheets. They are used
     for the balance sheet part of the code.
 * [src/main.py][main]
@@ -43,7 +43,7 @@ tracks of lunches. The other part is a chatbot that does fun/annoying things.
     is [Idempotent](https://en.wikipedia.org/wiki/Idempotence)**
 * [src/chatBot.py][chatbot]
     This is the _fun_ part of the code, here the bot actually writes in the
-    chat, this file extends the class described [here](class). The code is
+    chat, this file extends the class described [here][class]. The code is
     event driven so look at the functions of the form `onEventHappend` for
     instance `onMessage`. Additional Inspiration can be found
     [here](https://fbchat.readthedocs.io/en/master/examples.html)
@@ -62,10 +62,10 @@ tracks of lunches. The other part is a chatbot that does fun/annoying things.
 * [X] ~~Function that creates a the table of lunhces~~
 * [X] ~~Environment setup~~
 
-[fbbot] : https://github.com/RusKursusGruppen/robo-flach/blob/master/src/FbBot.py
-[gg] : https://gspread.readthedocs.io/en/latest/oauth2.html Google guide
-[fbChat] : https://fbchat.readthedocs.io/en/master/#
-[main] : https://github.com/RusKursusGruppen/robo-flach/blob/master/src/main.py
+[google guide]: https://gspread.readthedocs.io/en/latest/oauth2.html
+[fbbot]: https://github.com/RusKursusGruppen/robo-flach/blob/master/src/FbBot.py
+[fbChat]: https://fbchat.readthedocs.io/en/master/#
+[main]: https://github.com/RusKursusGruppen/robo-flach/blob/master/src/main.py
 [googleBot]: https://github.com/RusKursusGruppen/robo-flach/blob/master/src/googleBot.py
 [chatbot]: https://github.com/RusKursusGruppen/robo-flach/blob/master/src/chatbot.py
-[class] : https://fbchat.readthedocs.io/en/master/api.html
+[class]: https://fbchat.readthedocs.io/en/master/api.html
