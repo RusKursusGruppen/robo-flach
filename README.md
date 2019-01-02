@@ -1,7 +1,8 @@
 ## Robo-Flach
 #### The helper for our lunch club.
 The club works by one person writing "anybody up for lunch?" in a messenger
-thread, the people that want to join then to the message with a `👍` emoji.
+thread, the people that want to join then reacts to the message with a `👍` 
+emoji.
 
 ## Set-up
 Run the following set of commands to get a local development environment
@@ -20,7 +21,7 @@ email = <email>
 password = <password>
 thread_id = <Thread_id>
 ```
-The other credential file is for the google sheet, follow the setup [guide](gg)
+The other credential file is for the google sheet, follow the [setup guide][gg]
 to obtain the file.
 
 ## Dependencies
@@ -66,5 +67,5 @@ tracks of lunches. The other part is a chatbot that does fun/annoying things.
 [fbChat] : https://fbchat.readthedocs.io/en/master/#
 [main] : https://github.com/RusKursusGruppen/robo-flach/blob/master/src/main.py
 [googleBot]: https://github.com/RusKursusGruppen/robo-flach/blob/master/src/googleBot.py
-[googleBot]: https://github.com/RusKursusGruppen/robo-flach/blob/master/src/chatbot.py
+[chatbot]: https://github.com/RusKursusGruppen/robo-flach/blob/master/src/chatbot.py
 [class] : https://fbchat.readthedocs.io/en/master/api.html
