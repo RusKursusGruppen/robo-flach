@@ -53,6 +53,8 @@ tracks of lunches. The other part is a chatbot that does fun/annoying things.
 ## TODO
 * [ ] Write message about lunch on every weekday
 * [ ] Welcome new members and add them to sheet
+* [ ] Put in production 
+* [ ] Improve message detection
 * [ ] Add jokes and shit to chatbot
 * [ ] Any ideas?
 
