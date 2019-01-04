@@ -54,7 +54,7 @@ class ChatBot(Client):
   def _checkAllNicks(self):
     actual_nicks = self.fetchGroupInfo(self.thread_id)[self.thread_id].nicknames
     for uid in self.nicknames:
-      if self.nicknames[uid] != actual_nicks[uid]:
+      if uid not in actual_nicks.keys() or self.nicknames[uid] != actual_nicks[uid]:
         self.changeNickname(self.nicknames[uid], uid, thread_id=self.thread_id,
                   thread_type=ThreadType.GROUP)
 
