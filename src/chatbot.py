@@ -13,6 +13,7 @@ class ChatBot(Client):
     self.thread_id = config['thread_id']
     super().__init__(config['email'], config['password'])
     self.nicknames = {
+      '1622678436' : 'Rus',
       '100000065006084': 'Rus',
       '100005477323629': 'Rus',
       '1063982976': 'Rus',
